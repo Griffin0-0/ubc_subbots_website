@@ -1,0 +1,381 @@
+.Home {
+    width: 100%;
+    height: 100%;
+
+
+    .playable-thumbnail {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        background: 
+            linear-gradient(7deg, rgba(0, 0, 0, 0.9), transparent 95%),
+            url("/images/steelhead_underwater.jpg") center / cover no-repeat;
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        padding: var(--padding-large);
+        box-sizing: border-box;
+
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+
+
+            h1 {
+                font-size: clamp(3rem, 10vw, 8rem);
+                color: white;
+                font-family: Audiowide, Helvetica, sans-serif;
+            }
+
+            svg {
+                aspect-ratio: 1 / 1;
+                width: clamp(50px, 10vw, 130px);
+                height: auto;
+                color: white;
+            }
+        }
+    }
+
+
+
+    .about {
+        padding: var(--padding-large);
+        margin-inline: auto;
+        border-block: 1px solid var(--black);
+        display: flex;
+        justify-content: center;
+
+
+        .about-inner {
+            height: min-content;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            width: clamp(var(--minimum-content-width), 100%, var(--maximum-content-width));
+            gap: var(--inline-gap);
+
+
+            .content {
+
+                h2 {
+                    font-weight: 400;
+                }
+
+                h2 span {
+                    font-size: clamp(2rem, 6vw, 4rem);
+                    font-weight: 500;
+                }
+                
+                h4 {
+                    font-weight: 400;
+                }
+            }
+
+            .display {
+                height: auto;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                justify-content: center;
+                display: flex;
+                min-width: 0;
+                min-height: 0;
+                justify-self: center;
+            }
+        }
+    }
+
+
+
+    .joinus {
+        padding: var(--padding-large);
+        display: flex;
+        justify-content: center;
+        border-block: 1px solid var(--black);
+        overflow: hidden;
+
+
+        .joinus-inner {
+            position: relative;
+            gap: var(--inline-gap);
+            width: clamp(var(--minimum-content-width), 100%, var(--maximum-content-width));
+            height: min-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .background {
+                position: absolute;
+                height: 170%;
+                width: auto;
+                aspect-ratio: 1 / 1;
+                z-index: -1;
+                color: var(--dark-green);
+                opacity: 0.15;
+                transform-origin: center;
+            }
+
+            .content {
+                flex: 2;
+                gap: 10px;
+                display: grid;
+
+                h2 {
+                    font-weight: 400;
+                }
+
+                h2 span {
+                    font-size: clamp(2rem, 6vw, 4rem);
+                    font-weight: 500;
+                }
+                
+                h4 {
+                    font-weight: 400;
+                }
+            }
+
+            .display {
+                flex: 2;
+                height: 100%;
+
+                img {
+                    object-fit: contain;
+                    max-width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+
+
+    .subteams {
+        padding: var(--padding-large);
+        display: flex;
+        justify-content: center;
+        border-block: 1px solid var(--black);
+        background-color: var(--dark-green);
+        
+
+        .subteams-inner {
+            gap: var(--block-gap);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: min-content;
+            width: clamp(var(--minimum-content-width), 100%, var(--maximum-content-width));
+
+
+            h1 {
+                color: var(--white);
+            }
+
+            .divider {
+                background-color: var(--white);
+                width: 100%;
+                height: 2px;
+            }
+
+            .subteam-panel {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+
+                .subteam-card {
+                    aspect-ratio: 1 / 1;
+                    position: relative;
+                    display: flex;
+                    align-items: end;
+                    transition: 0.2s ease;
+                    
+                    .card-display {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 0;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                        .img-mask {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-image: linear-gradient(12deg, var(--black) 0%, transparent 75%);
+                            transition: 0.2s ease;
+                        }
+                    }
+
+                    .card-content {
+                        width: 100%;
+                        height: min-content;
+                        display: flex;
+                        padding: 15px 20px;
+                        justify-content: space-between;
+                        align-items: center;
+                        z-index: 1;
+                        opacity: 0;
+                        transition: 0.2s ease;
+                        transform: translateY(20%);
+
+                        svg {
+                            height: auto;
+                            fill: var(--white);
+                        }
+
+                        h2 {
+                            color: var(--white);
+                        }
+
+                    }
+                }
+
+                .subteam-card:hover {
+                    transform: scale(0.98);
+                }
+
+                .subteam-card:hover .img-mask {
+                    background-image: linear-gradient(12deg, var(--black) 0%, transparent 50%);
+                }
+
+                .subteam-card:hover .card-content {
+                    transform: translateY(0%);
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
+
+
+    .sponsors {
+        padding: var(--padding-large);
+        display: flex;
+        justify-content: center;
+        border-block: 1px solid var(--black);
+
+
+        .sponsors-inner {
+            display: flex;
+            flex-direction: column;
+            gap: var(--block-gap);
+            height: min-content;
+            width: clamp(var(--minimum-content-width), 100%, var(--maximum-content-width));
+
+
+            .divider {
+                background-color: var(--dark-green);
+                width: 100%;
+                height: 2px;
+            }
+        }
+    }
+
+
+
+    .sponsor-cta {
+        height: 400px;
+        border-block: 1px solid var(--black);
+        overflow: hidden;
+        padding: var(--padding-large);
+        margin-inline: auto;
+        display: flex;
+
+
+        .sponsor-cta-inner-wrapper {
+            width: 100%;
+            height: 100%;
+            background: var(--dark-green) url("images/steelhead_swimming.jpg") no-repeat left center;
+            background-size: cover;
+            backdrop-filter: brightness(0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .sponsor-cta-inner {
+                width: clamp(var(--minimum-content-width), 100%, var(--maximum-content-width));
+
+
+                .cta-content {
+                    width: 100%;
+                    height: 100%;
+                    padding: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+
+
+                    h1 {
+                        color: var(--white);
+                    }
+
+                    .arrow-animation {
+                        height: 25%;
+                        overflow: hidden;
+                        aspect-ratio: 1 / 1;
+                        display: flex;
+                        gap: 50px;
+
+                        .arrow-animation-wrapper {
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            display: flex;
+                            transform: translateX(-65%);
+                            gap: 50px;
+                            transition: 0.2s ease-out;
+
+                            svg {
+                                transform-origin: center center;
+                                transform: rotateZ(45deg);
+                                fill: var(--white);
+                                aspect-ratio: 1 / 1;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sponsor-cta-inner:hover .arrow-animation-wrapper {
+                transform: translateX(0%) !important;
+            }
+
+            .sponsor-cta-inner:hover .img-mask {
+                opacity: 0.2;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .about {
+        grid-template-columns: 1fr !important;
+
+        .content {
+            grid-row: 2;
+        }
+
+        .display {
+            max-width: 300px;
+            grid-row: 1;
+        }
+    }
+
+    .joinus {
+        flex-direction: column-reverse;
+    }
+}

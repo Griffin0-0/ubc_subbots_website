@@ -1,0 +1,29 @@
+[
+    {
+        "tier": "Platinum",
+        "price": 5000,
+        "image": "",
+        "deliverables": ["", "", "", ""]
+    },
+
+    {
+        "tier": "Gold",
+        "price": 2500,
+        "image": "",
+        "deliverables": ["", "", "", ""]
+    },
+
+    {
+        "tier": "Silver",
+        "price": 1000,
+        "image": "",
+        "deliverables": ["", "", "", ""]
+    },
+
+    {
+        "tier": "Bronze",
+        "price": 500,
+        "image": "",
+        "deliverables": ["", "", "", ""]
+    }
+]

@@ -1,0 +1,88 @@
+[
+    {
+        "title": "Software",
+        "image": "/images/steelhead_out_of_water.jpg",
+        "description": "Developing autonomous underwater navigation systems, implementing computer vision algorithms, controlling thrusters for precise movement, managing torpedo and manipulator actuators, and integrating everything into a single cohesive autonomous platform.",
+        "categories": ["Website / Design", "Computer Vision", "Data Centralization", "Autonomous Navigation"],
+        "projects": [
+                {
+                    "name": "Computer Vision",
+                    "resources": ["Ros2", "OpenCV", "Gazebo"],
+                    "description": "Our computer vision simulation in action. The program manges to distinguish our test image 'Lena' from the underwater surroundings.One quirk about underwater images is that the farther away an object is, the greener it looks. Light behaves differently underwater than on land due to scattering and absorption, meaning if we want our camera simulation to look realistic, we need to model the behaviour of light. A key component of our simulation is underwater image synthesis, which takes an RGBD image (colour and depth) rendered in our simulation and generates an RGB image of an underwater scene.",
+                    "image": "/images/steelhead_underwater.jpg"
+                },
+
+                {
+                    "name": "DevOps",
+                    "resources": ["Ros2", "OpenCV", "Gazebo"],
+                    "description": "Our computer vision simulation in action. The program manges to distinguish our test image 'Lena' from the underwater surroundings.One quirk about underwater images is that the farther away an object is, the greener it looks. Light behaves differently underwater than on land due to scattering and absorption, meaning if we want our camera simulation to look realistic, we need to model the behaviour of light. A key component of our simulation is underwater image synthesis, which takes an RGBD image (colour and depth) rendered in our simulation and generates an RGB image of an underwater scene.",
+                    "image": "/images/steelhead_underwater.jpg"
+                },
+
+                {
+                    "name": "Control Systems",
+                    "resources": ["Ros2", "OpenCV", "Gazebo"],
+                    "description": "Our computer vision simulation in action. The program manges to distinguish our test image 'Lena' from the underwater surroundings.One quirk about underwater images is that the farther away an object is, the greener it looks. Light behaves differently underwater than on land due to scattering and absorption, meaning if we want our camera simulation to look realistic, we need to model the behaviour of light. A key component of our simulation is underwater image synthesis, which takes an RGBD image (colour and depth) rendered in our simulation and generates an RGB image of an underwater scene.",
+                    "image": "/images/steelhead_underwater.jpg"
+                }
+            ]
+    },
+
+    {
+        "title": "Electrical",
+        "image": "/images/steelhead_out_of_water.jpg",
+        "description": "Developing autonomous underwater navigation systems, implementing computer vision algorithms, controlling thrusters for precise movement, managing torpedo and manipulator actuators, and integrating everything into a single cohesive autonomous platform.",
+        "categories": ["Website / Design", "Computer Vision", "Data Centralization", "Autonomous Navigation"],
+        "projects": [
+                {
+                    "name": "Sound Localization",
+                    "resources": ["Ros2", "OpenCV", "Gazebo"],
+                    "description": "In order to locate some of the tasks at Robosub, we are developing a system that will allow us to locate underwater pingers emitting sounds at known frequencies. In order to do that, we are designing circuits to process signals coming out of a hydrophone (underwater microphone) and researching a variety of techniques to use those signals for localization. This project is one of the more challenging and well rounded projects on the team, involving a wide range of design topics from analog circuitry to firmware/software. The high level diagram featured above shows one of the architectures we are currently considering for our system.",
+                    "image": "/images/steelhead_underwater.jpg"
+                },
+
+                {
+                    "name": "Wiring",
+                    "resources": ["Ros2", "OpenCV", "Gazebo"],
+                    "description": "In order to locate some of the tasks at Robosub, we are developing a system that will allow us to locate underwater pingers emitting sounds at known frequencies. In order to do that, we are designing circuits to process signals coming out of a hydrophone (underwater microphone) and researching a variety of techniques to use those signals for localization. This project is one of the more challenging and well rounded projects on the team, involving a wide range of design topics from analog circuitry to firmware/software. The high level diagram featured above shows one of the architectures we are currently considering for our system.",
+                    "image": "/images/steelhead_underwater.jpg"
+                },
+
+                {
+                    "name": "Battery Management",
+                    "resources": ["Ros2", "OpenCV", "Gazebo"],
+                    "description": "In order to locate some of the tasks at Robosub, we are developing a system that will allow us to locate underwater pingers emitting sounds at known frequencies. In order to do that, we are designing circuits to process signals coming out of a hydrophone (underwater microphone) and researching a variety of techniques to use those signals for localization. This project is one of the more challenging and well rounded projects on the team, involving a wide range of design topics from analog circuitry to firmware/software. The high level diagram featured above shows one of the architectures we are currently considering for our system.",
+                    "image": "/images/steelhead_underwater.jpg"
+                }
+            ]
+    },
+
+    {
+        "title": "Mechanical",
+        "image": "/images/steelhead_out_of_water.jpg",
+        "description": "Developing autonomous underwater navigation systems, implementing computer vision algorithms, controlling thrusters for precise movement, managing torpedo and manipulator actuators, and integrating everything into a single cohesive autonomous platform.",
+        "categories": ["Website / Design", "Computer Vision", "Data Centralization", "Autonomous Navigation"],
+        "projects": [
+                {
+                    "name": "Actuators",
+                    "resources": ["Ros2", "OpenCV", "Gazebo"],
+                    "description": "There are several tasks in the Robosub competition that involve objects to be manipulated. To complete these tasks additional actuator systems are required. One of our actuator systems is a robotic manipulator arm, designed to grip and move various objects. So far, we have designed a 2-degree of freedom arm, with an end effector made for gripping. This project involves close collaboration with the electrical actuators team, making work on Triton's actuators a very good exercise in mechatronics engineering.",
+                    "image": "/images/steelhead_underwater.jpg"
+                },
+
+                {
+                    "name": "Frames and Enclosures",
+                    "resources": ["Ros2", "OpenCV", "Gazebo"],
+                    "description": "There are several tasks in the Robosub competition that involve objects to be manipulated. To complete these tasks additional actuator systems are required. One of our actuator systems is a robotic manipulator arm, designed to grip and move various objects. So far, we have designed a 2-degree of freedom arm, with an end effector made for gripping. This project involves close collaboration with the electrical actuators team, making work on Triton's actuators a very good exercise in mechatronics engineering.",
+                    "image": "/images/steelhead_underwater.jpg"
+                },
+
+                {
+                    "name": "Hydrodynamics and Waterproofing",
+                    "resources": ["Ros2", "OpenCV", "Gazebo"],
+                    "description": "There are several tasks in the Robosub competition that involve objects to be manipulated. To complete these tasks additional actuator systems are required. One of our actuator systems is a robotic manipulator arm, designed to grip and move various objects. So far, we have designed a 2-degree of freedom arm, with an end effector made for gripping. This project involves close collaboration with the electrical actuators team, making work on Triton's actuators a very good exercise in mechatronics engineering.",
+                    "image": "/images/steelhead_underwater.jpg"
+                }
+            ]
+    }
+]

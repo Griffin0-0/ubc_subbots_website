@@ -1,0 +1,80 @@
+.sponsor-catalog {
+    min-height: min-content;
+    background-color: var(--muted-tan);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+    h2 {
+        padding: var(--padding-large);
+    }
+
+    .scroll-x-container {
+        width: 100%;
+        height: min-content;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        flex-direction: column;
+        gap: var(--block-gap);
+        scroll-padding: var(--padding-large);
+
+
+        .sponsor-deck {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: unset;
+            grid-auto-columns: 1fr;
+            min-width: fit-content;
+            padding: 0 var(--padding-large);
+            gap: var(--inline-gap);
+
+
+            .sponsor-card {
+                width: 500px;
+                aspect-ratio: 1 / 1;
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                scroll-snap-align: start;
+                overflow: hidden;
+
+
+                .display {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: var(--block-gap);
+
+
+                    img {
+                        width: 60%;
+                        height: min-content;
+                        object-fit: cover;
+                    }
+
+                    .underline {
+                        width: 10%;
+                        height: 2px;
+                        background-color: var(--dark-green);
+                    }
+                }
+
+                .content {
+                    
+                }
+            }
+        }
+    }
+
+    .divider {
+        background-color: var(--dark-green);
+        width: 100%;
+        height: 2px;
+        margin-block: var(--padding-large);
+    }
+
+
+}

@@ -1,0 +1,84 @@
+.subteam {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    padding: var(--padding-large);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+
+    .background {
+        position: absolute;
+        height: 200%;
+        width: auto;
+        aspect-ratio: 1 / 1;
+        z-index: -1;
+        color: var(--dark-green);
+        opacity: 0.15;
+        transform-origin: center;
+        left: -25%;
+        top: -50%;
+    }
+
+    .subteam-inner {
+        display: flex;
+        flex-direction: column;
+        gap: var(--block-gap-reduced);
+        width: clamp(var(--minimum-content-width), 100%, var(--maximum-content-width));
+
+
+        .subteam-header {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-direction: column;
+            gap: var(--block-gap-reduced);
+
+            
+            .divider {
+                width: 100%;
+                height: 2px;
+                background-color: var(--dark-green);
+            }
+        }
+
+        .subteam-display {
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .subteam-content {
+            width: 100%;
+            display: flex;
+            padding: 20px var(--padding-large);
+            box-sizing: border-box;
+
+            .content-left {
+                flex: 1 0 0;
+                height: 100%;
+
+
+                > p {
+                    padding-block: 4px;
+                }
+            }
+
+            .content-right {
+                flex: 2 0 0;
+
+
+                > p {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

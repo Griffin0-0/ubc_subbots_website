@@ -1,0 +1,86 @@
+.project-info {
+    padding: var(--padding-large);
+    background-color: var(--muted-tan);
+    border-block: 1px solid var(--black);
+    display: flex;
+    justify-content: center;
+
+
+    .project-info-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: clamp(var(--minimum-content-width), 100%, var(--maximum-content-width));
+
+
+
+        .option-header {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+
+            > p {
+                padding: 10px 20px;
+                text-align: center;
+                border-bottom: 2px solid var(--pastel-green);
+                transition: 0.15s;
+                font-weight: 500;
+            }
+
+            > p:hover {
+                border-bottom: 2px solid var(--dark-green);
+            }
+
+            > p.selected {
+                background-color: var(--dark-green);
+                color: var(--white);
+                border-bottom: 2px solid var(--dark-green);
+            }
+        }
+
+        .option-display {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: var(--padding-large);
+            box-sizing: border-box;
+            width: 80%; /* TODO: replace with clamp */
+            aspect-ratio: 3 / 2;
+            gap: var(--inline-gap);
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .resources {
+                    display: flex;
+                    gap: 5px;
+
+
+                    > div {
+                        border-radius: 5px;
+                        padding: 3px 5px;
+                        border: 1px solid var(--dark-green);
+                        transition: 0.15s;
+                    }
+
+                    > div:hover {
+                        background-color: var(--dark-green);
+                        color: var(--white);
+                    }
+                }
+
+                p {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

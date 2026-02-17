@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Altium",
+    "logo": "altium.png",
+    "website": "https://www.altium.com/",
+    "description": "Altium Discover enables engineers to discover and explore solutions that align with real project needs and requirements—from design fit to downstream impact.",
+    "tier": "gold",
+    "theme": "#313131"
+  },
+  {
+    "name": "UBC Electrical and Computer Engineering",
+    "logo": "ece.png",
+    "website": "https://ece.ubc.ca/",
+    "description": "description",
+    "tier": "gold",
+    "theme": "cyan"
+  },
+  {
+    "name": "MatLab",
+    "logo": "matlab.png",
+    "website": "https://www.mathworks.com/products/matlab.html",
+    "description": "description",
+    "tier": "gold",
+    "theme": "cyan"
+  },
+  {
+    "name": "UBC Applied Science",
+    "logo": "ubc_apsc.jpg",
+    "website": "https://apsc.ubc.ca/",
+    "description": "description",
+    "tier": "gold",
+    "theme": "cyan"
+  },
+  {
+    "name": "UBC Mechanical Engineering",
+    "logo": "ubc_mech_eng.png",
+    "website": "https://mech.ubc.ca/",
+    "description": "description",
+    "tier": "gold",
+    "theme": "cyan"
+  },
+  {
+    "name": "Onshape",
+    "logo": "onshape.svg",
+    "website": "https://www.onshape.com/en/",
+    "description": "description",
+    "tier": "gold",
+    "theme": "cyan"
+  },
+  {
+    "name": "UBC Integrated Engineering",
+    "logo": "ubc_igen.png",
+    "website": "https://www.integratedengineers.ca/",
+    "description": "description",
+    "tier": "gold",
+    "theme": "cyan"
+  },
+  {
+    "name": "Pressing Media",
+    "logo": "pressing_media.png",
+    "website": "https://pressing-media.com/",
+    "description": "description",
+    "tier": "gold",
+    "theme": "cyan"
+  }
+]
