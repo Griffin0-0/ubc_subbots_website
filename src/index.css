@@ -183,6 +183,13 @@ a:hover {
 }
 
 button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.button-primary {
   color: var(--black);
   border-radius: 10px;
   border: 2px solid transparent;
@@ -198,9 +205,12 @@ button {
   justify-content: center;
   align-items: center;
 }
-button:hover {
+
+.button-primary:hover {
   border-color: #646cff;
 }
+
+
 /* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import './SponsorTiers.css';
 
@@ -17,6 +17,7 @@ type Sponsor = {
 
 type SponsorTier = {
     tier: string;
+    color: string;
     price: number;
     image: string;
     deliverables: string[];
@@ -26,6 +27,7 @@ function SponsorTiers() {
 
     const [sponsorTiers, setSponsorTiers] = useState<SponsorTier[]>([]);
     const [sponsors, setSponsors] = useState<Sponsor[] | []>([]);
+    const [currentTier, setCurrentTier] = useState(-1);
 
     useEffect(() => {
         fetch('/data/sponsor-tiers.json')
@@ -51,8 +53,23 @@ function SponsorTiers() {
     );
 
 
+    function setDropdown(id: number) {
+        if (id === currentTier) {
+            setCurrentTier(-1);
+        } else {
+            setCurrentTier(id);
+        }
+    }
+
+
     const tierDeck = sponsorTiers.map((item, index) => {
-        return <TierDropdown key={index} id={index} sponsorTier={item} sponsorCount={sponsorCountByTier[item.tier] ?? 0} />
+        return <TierDropdown 
+            key={index} 
+            id={index} 
+            sponsorTier={item} 
+            sponsorCount={sponsorCountByTier[item.tier] ?? 0}
+            setCurrentTier={setDropdown}
+            currentTier={currentTier} />
     });
 
 
@@ -69,28 +86,45 @@ function SponsorTiers() {
 interface tierDropdownProps {
     sponsorTier: SponsorTier;
     sponsorCount: number;
+    currentTier: number;
+    setCurrentTier: (id: number) => void;
     id: number;
 }
 
 
-function TierDropdown({ sponsorTier, sponsorCount, id }: tierDropdownProps) {
+function TierDropdown({ sponsorTier, sponsorCount, currentTier, setCurrentTier, id }: tierDropdownProps) {
 
+    let dropdownEnabled = currentTier === id;
 
     return (
-        <div className="tier-dropdown">
+        <button 
+            className={`tier-dropdown ${dropdownEnabled ? "shown" : ""}`}
+            onClick={() => setCurrentTier(id)}
+            style={{
+                "--tier-bg-color": sponsorTier.color
+            } as React.CSSProperties }>
+
             <div className="header">
                 <h2>{sponsorTier.tier}</h2>
-                {/* <FontAwesomeIcon icon={} /> */}
+
+                <div>
+                    <h2>${sponsorTier.price}+</h2>
+                    <FontAwesomeIcon icon={faAngleRight} className={dropdownEnabled ? "rotate" : ""}/>
+                </div>
             </div>
 
-            <div className="dropdown-content">
-                <img src="" />
+            <div className={`dropdown-content ${dropdownEnabled ? "shown" : ""}`}>
+                <div>
+                    <img src="" />
 
-                <div></div>
+                    <div>
 
-                <h4>{sponsorCount} Current sponsor{sponsorCount === 1 ? "" : "s"}</h4>
+                    </div>
+
+                    <h4>{sponsorCount} current sponsor{sponsorCount === 1 ? "" : "s"}</h4>
+                </div>
             </div>
-        </div>
+        </button>
     );
 }
 

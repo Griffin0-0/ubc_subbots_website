@@ -15,4 +15,14 @@
         padding: var(--padding-large);
         box-sizing: border-box;
     }
+
+    .tiers {
+
+
+        .title {
+            padding: var(--padding-large);
+            box-sizing: border-box;
+            border-block: 2px solid var(--dark-green);
+        }
+    }
 }

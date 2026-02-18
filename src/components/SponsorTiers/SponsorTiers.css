@@ -1,3 +1,68 @@
 .sponsor-tiers {
     
+
+
+    .tier-dropdown {
+        width: 100%;
+        max-height: 100%;
+        padding: var(--padding-regular) var(--padding-large);
+        box-sizing: border-box;
+        border-bottom: 2px solid var(--dark-green);
+        background-color: none;
+        transition: 0.25s;
+
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            > h2 {
+                font-weight: 400;
+            }
+
+            > div {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 40px;
+                align-items: center;
+
+
+                > h2 {
+                    font-weight: 400;
+                }
+                
+                > svg {
+                    width: auto;
+                    aspect-ratio: 1 / 1;
+                    height: 80%;
+                    color: var(--black);
+                    transition: transform 0.25s ease;
+                }
+
+                > svg.rotate {
+                    transform: rotate(90deg);
+                }
+
+            }
+        }
+
+        .dropdown-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.25s ease;
+        }
+
+        .dropdown-content > div {
+            overflow: hidden;
+        }
+
+        .dropdown-content.shown {
+            grid-template-rows: 1fr;
+        }
+    }
+
+    .tier-dropdown:hover, .tier-dropdown.shown {
+        background-color: var(--tier-bg-color);
+    }
 }

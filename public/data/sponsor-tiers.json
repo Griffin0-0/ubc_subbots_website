@@ -1,6 +1,7 @@
 [
     {
         "tier": "Platinum",
+        "color": "#D6E4F5",
         "price": 5000,
         "image": "",
         "deliverables": ["", "", "", ""]
@@ -8,6 +9,7 @@
 
     {
         "tier": "Gold",
+        "color": "#E6C200",
         "price": 2500,
         "image": "",
         "deliverables": ["", "", "", ""]
@@ -15,6 +17,7 @@
 
     {
         "tier": "Silver",
+        "color": "#C9CED6",
         "price": 1000,
         "image": "",
         "deliverables": ["", "", "", ""]
@@ -22,6 +25,7 @@
 
     {
         "tier": "Bronze",
+        "color": "#C38440",
         "price": 500,
         "image": "",
         "deliverables": ["", "", "", ""]

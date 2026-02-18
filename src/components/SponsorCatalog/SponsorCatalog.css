@@ -70,10 +70,37 @@
     }
 
     .divider {
-        background-color: var(--dark-green);
-        width: 100%;
-        height: 2px;
-        margin-block: var(--padding-large);
+        box-sizing: border-box;
+        border-bottom: 2px solid var(--dark-green);
+        max-width: 100%;
+        margin: var(--padding-large) 40px;
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+        padding-bottom: var(--padding-small);
+
+
+        .switch {
+            border-radius: 100%;
+            height: 40px;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--dark-green);
+            border: 1px solid var(--dark-green);
+            transition: background-color 0.25s ease, color 0.25s ease;
+
+
+            svg {
+                height: 18px;
+            }
+        }
+
+        .switch:hover {
+            background-color: var(--dark-green);
+            color: var(--white);
+        }
     }
 
 

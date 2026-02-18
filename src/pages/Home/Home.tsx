@@ -65,7 +65,7 @@ function Home() {
                             At UBC Subbots, we embrace students from all backgrounds and provide hands-on 
                             learning in a supportive, beginner-friendly environment.
                         </h4>
-                        <button>
+                        <button className="button-primary">
                             Join Us
                             <FontAwesomeIcon icon={faUserPlus} />
                         </button>

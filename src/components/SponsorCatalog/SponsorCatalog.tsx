@@ -1,4 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
 import './SponsorCatalog.css';
 
 
@@ -15,6 +18,7 @@ type Sponsor = {
 function SponsorCatalog() {
 
     const [sponsors, setSponsors] = useState<Sponsor[] | []>([]);
+    const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         fetch('/data/sponsors.json')
@@ -29,18 +33,50 @@ function SponsorCatalog() {
     });
 
 
+    const scrollNext = () => {
+        const container = scrollRef.current;
+        if (!container) return;
+
+        const inner = container.children[0];
+
+        // Get width of one section
+        const sectionWidth = inner.firstElementChild?.clientWidth ?? 0;
+
+        // Scroll by one section width
+        container.scrollBy({ left: sectionWidth, behavior: "smooth" });
+    };
+
+    const scrollPrev = () => {
+        const container = scrollRef.current;
+        if (!container) return;
+
+        const inner = container.children[0];
+
+        const sectionWidth = inner.firstElementChild?.clientWidth ?? 0;
+        container.scrollBy({ left: -sectionWidth, behavior: "smooth" });
+    };
+
+
     return (
         <section className="sponsor-catalog">
 
             <h2>Our Sponsors</h2>
 
-            <div className="scroll-x-container">
+            <div className="scroll-x-container" ref={scrollRef}>
                 <div className="sponsor-deck">
                     {sponsorDeck}
                 </div>
             </div>
 
-            <div className="divider" />
+            <div className="divider">
+                <button className="switch" onClick={scrollPrev}>
+                    <FontAwesomeIcon icon={faAngleLeft}/>
+                </button>
+
+                <button className="switch" onClick={scrollNext}>
+                    <FontAwesomeIcon icon={faAngleRight}/>
+                </button>
+            </div>
 
         </section>
     );
